@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+	position:absolute;
+
+
+}
+</style>
+</head>
+<body>
+</body>
+
+
+<script type="text/javascript">
+
+var x = 0;
+
+while(x < 100){
+
+	var d = document.createElement("div");
+	// the div has been made, but not added
+
+	var red = parseInt( Math.random() * 256 );
+	d.style.backgroundColor = "rgb("+ red +" , 0,0)";
+
+	var randomwidth = parseInt ( Math.random() * 500 );
+	d.style.width = randomwidth + "px";
+
+	var randomheight = parseInt ( Math.random() * 700);
+	d.style.height = randomheight + "px";
+
+	var randomleft = parseInt ( Math.random() * 900);
+	d.style.left= randomleft + "px";
+
+	var randomtop = parseInt ( Math.random() * 800);
+	d.style.top= randomtop + "px";
+
+	
+
+
+
+	// add the div to the page
+	document.body.appendChild(d);
+
+	x = x + 1;
+}
+
+
+</script>
+</html>

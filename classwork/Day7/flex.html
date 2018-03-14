@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{height:100%;}
+body{
+	margin:0;
+	display: flex;
+	flex-direction: column;
+}
+div{
+	flex:1;
+}
+</style>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+
+var x = 0;
+
+while(x < 10){
+
+	var d = document.createElement("div");
+	var blue = parseInt( Math.random() * 256 );
+	d.style.backgroundColor = "rgb(0, 0, " + blue + ")";
+	document.body.appendChild(d);
+
+	x = x + 1;
+}
+
+
+</script>
+</html>
