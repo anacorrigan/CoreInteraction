@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<style>
+div{
+	position:absolute;
+}
+</style>
+<body>
+</body>
+<script>
+
+function randomInt( low, high ){
+	var random = parseInt(Math.random()*(high-low) +low);
+	return random;
+
+}
+
+var counter = 0;
+while(counter<300){
+
+	var d = document.createElement("div");
+	d.style.backgroundColor= "hsl("+ randomInt(180,360) + ", 100%, 33%)";
+	d.style.width = randomInt(10,500) + "px";
+	d.style.height = randomInt(10,500) + "px";
+	d,
+	document.body.appendChild(d);
+	counter=counter+1;
+}
+
+
+
+</script>
+</html>

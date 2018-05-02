@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<script>
+
+var url = "http://api.citybik.es/v2/networks/citi-bike-nyc";
+var myLat = 40.7409144;
+var myLon = -73.9884934;
+console.log("hyi");
+
+// $.getJSON(url, function(){});
+$.getJSON( url, function(data){
+	//console.log(data);
+	//var stations = data.network.stations;
+
+	var stations = data.network.stations.sort(function(a,b){
+		var lat = Math.abs(a.latitude - myLat);
+		var lon = Math.abs(a.longitude - myLon);
+
+		var latB = Math.abs( b.latitude - myLat);
+		var LonB = Math.abs( b.longitude - myLon);
+
+		return( latA + lonA) - (latB + lonB);
+
+	});
+
+
+	//console.log(stations);
+
+	//var i = 0;
+	//while(i < 809){
+	//	i = i+1;
+
+	//}
+
+	console.log(stations);
+
+
+
+	for (var i = 0; i < stations.length; i = i + 1 ){
+		console.log( stations[i].name);
+		var p = document.createElement("p");
+		p.innerHTML = stations[i].free_bikes
+		+ " : " + stations[i].name;
+		document.body.appendChild(p);
+	}
+
+});
+</script>
+
+
+
+</body>
+</html>

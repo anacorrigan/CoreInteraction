@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<style>
+div{
+	position:absolute;
+}
+</style>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+	
+<script>
+
+var url = "https://raw.githubusercontent.com/robbykraft/CoreInteraction/master/divs.json";
+
+
+$.getJSON(url, function(data){
+	console.log( data );
+
+	console.log( Object.keys(data) );
+
+
+function randomInt( low, high ){
+	var random = parseInt(Math.random()*(high-low) +low);
+	return random;
+
+}
+
+var counter = 0;
+while(counter<300){
+
+	var d = document.createElement("div");
+	d.style.backgroundColor= "hsl("+ randomInt(180,360) + ", 100%, 33%)";
+	d.style.width = randomInt(10,500) + "px";
+	d.style.height = randomInt(10,500) + "px";
+	d.style.left = randomInt(10,500) + "px";
+	d.style.top = randomInt(10,500) + "px";
+	document.body.appendChild(d);
+	counter=counter+1;
+}
+
+
+
+
+
+
+		});
+
+	
+
+</script>
+
+</body>
+</html>

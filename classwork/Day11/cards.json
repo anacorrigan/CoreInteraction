@@ -1,0 +1,38 @@
+{
+	"cards":[
+		{
+			"stamps" : 4, 
+			"date" : 1984,
+			"to": {
+				"address": "9 chestnut Drive Woodstawn, New Jersey 08098 U.S.A ",
+				"name": "Mr. and Mrs. Lowell Foulke "
+			},
+			"from": {
+				"address" : "Le Mont Saint-Michel"
+			},
+			"ink": "black",
+			"font": "cursive",
+
+
+		},
+
+		{
+			"stamps" : 4, 
+			"date" : 1984,
+			"to": {
+				"address": "9 chestnut Drive Woodstawn, New Jersey 08098 U.S.A ",
+				"name": "Mr. and Mrs. Lowell Foulke "
+			},
+			"from": {
+				"address" : "Le Mont Saint-Michel"
+			},
+			"ink": "black",
+			"font": "cursive",
+
+
+		},
+
+		
+
+	]
+}
